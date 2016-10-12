@@ -1,3 +1,5 @@
+Application base on Introduction to Ember course from Yehuda Katz and Tom Dale (https://training.teamgaslight.com/classroom/#/courses/14)
+
 # Bumbox
 
 Welcome to Bumbox! We're excited to help you learn Ember. This repo
@@ -43,4 +45,3 @@ We recommend using the browser for this course.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
