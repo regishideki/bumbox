@@ -1,4 +1,4 @@
-Application base on Introduction to Ember course from Yehuda Katz and Tom Dale (https://training.teamgaslight.com/classroom/#/courses/14)
+# Application base on Introduction to Ember course from Yehuda Katz and Tom Dale (https://training.teamgaslight.com/classroom/#/courses/14)
 
 # Bumbox
 
