@@ -1,5 +1,7 @@
 # Application base on Introduction to Ember course from Yehuda Katz and Tom Dale (https://training.teamgaslight.com/classroom/#/courses/14)
 
+:warning: It seems the course was designed in Ember 1.x version while I use 2.4.2 version. So, there are some differences between my code and the code provided by the course. All the differences are described in pull requests descriptions.
+
 # Bumbox
 
 Welcome to Bumbox! We're excited to help you learn Ember. This repo
