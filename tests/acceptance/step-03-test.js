@@ -3,7 +3,7 @@
   application template. However, as you just learned, creating
   an app that supports multiple pages requires at least one outlet.
 
-  To get the tests for Step 4 passing, you'll need to make a few
+  To get the tests for Step 3 passing, you'll need to make a few
   structural changes.
 
   1) Move all of the album-specific HTML out of the application
