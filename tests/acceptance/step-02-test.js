@@ -1,5 +1,5 @@
 /*
-  For Step 3, use the `{{#if}}` helper to only show an "EXPLICIT" warning
+  For Step 2, use the `{{#if}}` helper to only show an "EXPLICIT" warning
   about the album if the model's `isExplicit` property is true.
 
   Your template should generate HTML that looks like this:
