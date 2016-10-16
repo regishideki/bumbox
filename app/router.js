@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('album', {
-    path: '/album/:albumId'
+    path: '/album/:album_id'
   })
 });
 
