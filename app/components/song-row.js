@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'tr',
@@ -14,4 +14,4 @@ export default Ember.Component.extend({
       this.set('isPlaying', false);
     }
   }
-})
+});
