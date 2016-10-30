@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Ember from 'ember';
 
 export function formatDuration(secondsQuantity) {
   if (secondsQuantity == null) { 
@@ -11,7 +11,7 @@ export function formatDuration(secondsQuantity) {
 function seconds(secondsQuantity) {
   const seconds = secondsQuantity % 60;
   
-  return (seconds < 10) ? '0' + seconds : seconds
+  return (seconds < 10) ? '0' + seconds : seconds;
 }
 
 function minutes(secondsQuantity) {
