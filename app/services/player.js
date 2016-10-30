@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-//try to change this
 let run = Ember.run;
 
 export default Ember.Service.extend({
@@ -12,6 +11,7 @@ export default Ember.Service.extend({
     var el = document.createElement('audio');
     el.addEventListener('play', run.bind(this, 'didStartPlaying'));
     el.addEventListener('pause', run.bind(this, 'didPause'));
+    
     this.set('audioElement', el);
   }.on('init'),
 
