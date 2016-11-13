@@ -9,8 +9,11 @@ export default Ember.Service.extend({
 
   audioElement: null,
 
+  currentTime: 0,
+
   setupAudioElement: function() {
     var el = document.createElement('audio');
+    el.addEventListener('timeupdate', run.bind(this, 'timeDidUpdate'))
     
     this.set('audioElement', el);
   }.on('init'),
@@ -26,6 +29,10 @@ export default Ember.Service.extend({
     this.get('audioElement').pause();
     this.set('audioElement.src', '');
     this.set('isPlaying', false);
+  },
+
+  timeDidUpdate: function() {
+    this.set('currentTime', Math.floor(this.get('audioElement.currentTime')));
   },
 
   willDestroy: function() {
