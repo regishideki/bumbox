@@ -8,4 +8,14 @@ export default Ember.Component.extend({
 
   song: Ember.computed.readOnly('player.song'),
   currentTime: Ember.computed.alias('player.currentTime'),
+
+  actions: {
+    resume: function() {
+      this.get('player').resume();
+    },
+
+    pause: function() {
+      this.get('player').pause();
+    },
+  }
 });
