@@ -30,8 +30,9 @@ test("Eventually isPlaying changes when the song is played", function() {
   expect(1);
   var song = Ember.Object.create({url: 'audio/Southern_Nights_-_07_-_All_My_Sorrows.mp3'});
 
-  propertyShouldBecome(player, 'isPlaying', true);
   player.play(song);
+
+  equal(player.get('isPlaying'), true, 'isPlaying property is set to true');  
 });
 
 test("The song stops playing when the service is destroyed", function() {
@@ -55,10 +56,12 @@ test("Eventually isPlaying becomes false when the song is paused", function() {
   var song = Ember.Object.create({url: 'audio/Southern_Nights_-_07_-_All_My_Sorrows.mp3'});
 
   player.play(song);
-  propertyShouldBecome(player, 'isPlaying', true);
+
+  equal(player.get('isPlaying'), true, 'isPlaying property is set to true');
 
   player.pause();
-  return propertyShouldBecome(player, 'isPlaying', false);
+
+  equal(player.get('isPlaying'), false, 'isPlaying property is set to false');
 });
 
 test("Clicking the song-row pause button pauses the player", function() {
