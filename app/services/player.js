@@ -22,17 +22,29 @@ export default Ember.Service.extend({
     this.set('song', song);
     this.set('audioElement.src', song.get('url'));
     this.get('audioElement').play();
-    this.set('isPlaying', true);
+    this.didPlay();
   },
 
   pause: function() {
     this.get('audioElement').pause();
-    this.set('audioElement.src', '');
-    this.set('isPlaying', false);
+    this.didPause();
+  },
+
+  resume: function() {
+    this.get('audioElement').play();
+    this.didPlay();
   },
 
   timeDidUpdate: function() {
     this.set('currentTime', Math.floor(this.get('audioElement.currentTime')));
+  },
+
+  didPlay: function() {
+    this.set('isPlaying', true);
+  },
+
+  didPause: function() {
+    this.set('isPlaying', false);
   },
 
   willDestroy: function() {
