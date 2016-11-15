@@ -39,8 +39,20 @@ test("when a song is loaded and the player is not playing, the component shows t
 });
 
 test("Toggling current and remaining time", function() {
+  var player = Ember.Object.extend().create();
+  var component = this.subject({player: player});
+  
+  Ember.run(function() {
+    player.set('song', {duration: 120});
+    player.set('currentTime', 30)
+  })
 
-  // TODO: IMPLEMENT THIS TEST
+  var durationElement = this.$().find('.duration');
 
+  equal(durationElement.text().trim(), '0:30', 'The component shows the current time');
+
+  durationElement.click();
+
+  equal(durationElement.text().trim(), '1:30', 'The component shows the remaining time');
 });
 
