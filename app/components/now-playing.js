@@ -8,6 +8,11 @@ export default Ember.Component.extend({
 
   song: Ember.computed.readOnly('player.song'),
   currentTime: Ember.computed.alias('player.currentTime'),
+  showCurrentTime: true,
+
+  remainingTime: Ember.computed('player.currentTime', 'song', 'song.duration', function() {
+    return Math.floor(this.get('song.duration') - this.get('player.currentTime'));
+  }),
 
   actions: {
     resume: function() {
@@ -16,6 +21,10 @@ export default Ember.Component.extend({
 
     pause: function() {
       this.get('player').pause();
+    },
+
+    toogleTimeDisplay: function() {
+      this.toggleProperty('showCurrentTime');
     },
   }
 });
